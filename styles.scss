@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+html {
+    font-family: 'Kanit', sans-serif;
+}
+@media (min-width: 320px) and (max-width: 800px) {
+    @mixin basic() {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    body.big {
+        @include basic();
+        height: 100vh;
+    }
+    div.main {
+        display: block;
+        gap: 30px;
+    }
+    div.social {
+        @include basic();
+        width: 200px;
+        border: 2px solid;
+        border-radius: 3px;
+        padding: 15px;
+        transition: 0.3s;
+        margin-bottom: 20px;
+    }
+}
+@mixin basic() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+body {
+    @include basic();
+    height: 100vh;
+}
+.main {
+    display: flex;
+    gap: 30px;
+}
+.social {
+    @include basic();
+    width: 200px;
+    border: 2px solid;
+    border-radius: 3px;
+    padding: 15px;
+    transition: 0.3s;
+}
+.social:hover {
+    background-color: #e2306c;
+    .icon {
+        color: white;
+        transition: 0.3s;
+    }
+    .texts {
+        transition: 0.3s;
+        color: white;
+    }
+    .read {
+        background-color: white;
+        color: #e2306c;
+    }
+}
+img {
+    width: 50px;
+}
+.texts {
+    @include basic();
+}
+h4 {
+    margin-top: 0;
+    opacity: 0.8;
+    font-size: 14px;
+}
+.read {
+    width: 200px;
+    height: 35px;
+    border-radius: 100px;
+    background-color: black;
+    border: 0;
+    color: white;
+}
